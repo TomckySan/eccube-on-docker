@@ -1,0 +1,21 @@
+eccube:
+  build: ./eccube
+  ports:
+    - "80:80"
+  volumes:
+    - ./eccube/volume:/var/www/html
+  links:
+    - mysql:mysql
+  privileged: true
+
+mysql:
+  image: mysql:5.6
+  ports:
+    - "3306:3306"
+  volumes:
+    - ./mysql/volume/mysql:/etc/mysql/conf.d
+    - ./mysql/volume/create_db.sql:/create_db.sql
+    - ./mysql/volume/insert_db.sql:/insert_db.sql
+  environment:
+    - MYSQL_ROOT_PASSWORD=password
+

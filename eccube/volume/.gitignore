@@ -1,0 +1,36 @@
+# Vim
+*~
+*.swp
+
+# Mac
+.DS_Store
+.Trashes/
+
+# ECCUBE
+appveyor.yml
+build.xml
+composer.json
+COPYING
+docs/
+Gruntfile.js
+package.json
+phpunit.xml.dist
+test/
+tests/
+
+# data directory
+data/install.php
+data/config/config.php
+data/cache/
+data/Smarty/templates_c/*
+data/logs/
+data/download/
+data/downloads/
+data/fonts/
+data/include/
+data/upload/
+
+# html directory
+upload/
+install/
+
